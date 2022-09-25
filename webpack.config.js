@@ -7,7 +7,7 @@ module.exports = (_, argv) => ({
     publicPath:
       argv.mode === "development"
         ? "http://localhost:8085/"
-        : "https://react-host-wp5-{some_endpoint}.vercel.app/",
+        : "https://react-hosting-react-mf-t9b6.vercel.app/",
   },
 
   resolve: {
@@ -54,7 +54,8 @@ module.exports = (_, argv) => ({
       name: "react_host",
       filename: "remoteEntry.js",
       remotes: {
-        "react-mfe": "react_mfe@http://localhost:8081/remoteEntry.js",
+        "react-mfe":
+          "react_mfe@https://react-mf-wp5-rk86.vercel.app/remoteEntry.js",
       },
       exposes: {},
       shared: {
